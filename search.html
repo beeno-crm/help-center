@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca | Central de Ajuda | Beeno CRM</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    .search-page { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    .search-header { margin-bottom: 2rem; }
+    .search-bar-wrap { display: flex; gap: .5rem; margin-bottom: 1.5rem; }
+    .search-bar-wrap input { flex: 1; padding: .75rem 1rem; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 1rem; outline: none; }
+    .search-bar-wrap input:focus { border-color: #3EBD7A; }
+    .search-bar-wrap button { padding: .75rem 1.5rem; background: #3EBD7A; color: #000; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; }
+    .search-results-count { color: #aaa; font-size: .9rem; margin-bottom: 1rem; }
+    .search-result-item { background: #111; border: 1px solid #222; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: .75rem; display: block; text-decoration: none; color: inherit; transition: border-color .2s, background .2s; }
+    .search-result-item:hover { border-color: #3EBD7A; background: #161616; }
+    .search-result-section { font-size: .75rem; color: #3EBD7A; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .3rem; }
+    .search-result-title { font-size: 1.05rem; font-weight: 600; color: #fff; }
+    .no-results { text-align: center; color: #aaa; padding: 3rem 0; }
+    .no-results .icon { font-size: 3rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">
+      <span class="logo-wordmark">beeno<span class="logo-dot"></span></span>
+    </a>
+    <span class="topbar-subtitle">Central de Ajuda</span>
+    <div class="topbar-right">
+      <a href="https://app.beeno.ai" target="_blank" class="topbar-link">Acessar Beeno →</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" id="sidebar-search" placeholder="Buscar artigos..." autocomplete="off">
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header"><span class="icon">🚀</span>Para Começar<span class="chevron">›</span></div>
+        <div class="sidebar-articles">
+          <a href="glossario-crm.html" class="sidebar-article">Glossário CRM</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header"><span class="icon">⚙️</span>Conta e Configuração<span class="chevron">›</span></div>
+        <div class="sidebar-articles">
+          <a href="conta.html" class="sidebar-article">Conta</a>
+          <a href="como-cadastrar-novos-usuarios.html" class="sidebar-article">Como Cadastrar Novos Usuários</a>
+          <a href="propriedades.html" class="sidebar-article">Propriedades</a>
+          <a href="configuracao-de-pipelines.html" class="sidebar-article">Configuração de Pipelines</a>
+          <a href="rotulos.html" class="sidebar-article">Rótulos</a>
+          <a href="importacao.html" class="sidebar-article">Importação</a>
+          <a href="integracoes.html" class="sidebar-article">Integrações</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header"><span class="icon">👥</span>CRM<span class="chevron">›</span></div>
+        <div class="sidebar-articles">
+          <a href="contatos.html" class="sidebar-article">Contatos</a>
+          <a href="etiquetas.html" class="sidebar-article">Etiquetas</a>
+          <a href="empresas.html" class="sidebar-article">Empresas</a>
+          <a href="produtos.html" class="sidebar-article">Produtos</a>
+          <a href="negocios.html" class="sidebar-article">Negócios</a>
+          <a href="tarefas.html" class="sidebar-article">Tarefas</a>
+          <a href="paineis-personalizados.html" class="sidebar-article">Painéis Personalizados</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header"><span class="icon">📱</span>WhatsApp API<span class="chevron">›</span></div>
+        <div class="sidebar-articles">
+          <a href="whatsapp-api.html" class="sidebar-article">WhatsApp API</a>
+          <a href="coexistencia-coex.html" class="sidebar-article">Coexistência (Coex)</a>
+          <a href="boas-praticas-do-whatsapp.html" class="sidebar-article">Boas Práticas do WhatsApp</a>
+          <a href="recursos-da-meta.html" class="sidebar-article">Recursos da Meta</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header"><span class="icon">📢</span>Marketing<span class="chevron">›</span></div>
+        <div class="sidebar-articles">
+          <a href="arquivos.html" class="sidebar-article">Arquivos</a>
+          <a href="e-mails.html" class="sidebar-article">E-mails</a>
+          <a href="formularios.html" class="sidebar-article">Formulários</a>
+          <a href="landing-page.html" class="sidebar-article">Landing Page</a>
+          <a href="segmentos.html" class="sidebar-article">Segmentos</a>
+          <a href="pontuacao.html" class="sidebar-article">Pontuação</a>
+          <a href="dominios.html" class="sidebar-article">Domínios</a>
+          <a href="anuncios.html" class="sidebar-article">Anúncios</a>
+          <a href="meta-pixel.html" class="sidebar-article">Meta Pixel</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header"><span class="icon">⚡</span>Fluxos de Automação<span class="chevron">›</span></div>
+        <div class="sidebar-articles">
+          <a href="fluxos-de-automacao.html" class="sidebar-article">Fluxos de Automação</a>
+          <a href="fluxos-acoes.html" class="sidebar-article">Fluxos - Ações</a>
+          <a href="fluxos-condicionais.html" class="sidebar-article">Fluxos - Condicionais</a>
+          <a href="fluxos-decisoes.html" class="sidebar-article">Fluxos - Decisões</a>
+          <a href="alvo-de-fluxo.html" class="sidebar-article">Alvo de Fluxo</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="search-page">
+        <div class="search-header">
+          <h1 style="font-size:1.6rem; margin-bottom:1rem;">Resultados da busca</h1>
+          <div class="search-bar-wrap">
+            <input type="text" id="main-search-input" placeholder="Buscar artigos..." autocomplete="off">
+            <button id="main-search-btn">Buscar</button>
+          </div>
+        </div>
+        <div class="search-results-count" id="results-count"></div>
+        <div id="search-results"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    // All articles index
+    const ARTICLES = [
+      { title: 'Glossário CRM', url: 'glossario-crm.html', section: 'Para Começar', keywords: 'glossário crm termos definições' },
+      { title: 'Conta', url: 'conta.html', section: 'Conta e Configuração', keywords: 'conta perfil configuração usuário' },
+      { title: 'Como Cadastrar Novos Usuários', url: 'como-cadastrar-novos-usuarios.html', section: 'Conta e Configuração', keywords: 'cadastrar usuários novo acesso permissão' },
+      { title: 'Propriedades', url: 'propriedades.html', section: 'Conta e Configuração', keywords: 'propriedades campos personalizados atributos' },
+      { title: 'Configuração de Pipelines', url: 'configuracao-de-pipelines.html', section: 'Conta e Configuração', keywords: 'pipelines funil etapas configuração' },
+      { title: 'Rótulos', url: 'rotulos.html', section: 'Conta e Configuração', keywords: 'rótulos labels tags categorias' },
+      { title: 'Importação', url: 'importacao.html', section: 'Conta e Configuração', keywords: 'importação importar csv dados contatos' },
+      { title: 'Integrações', url: 'integracoes.html', section: 'Conta e Configuração', keywords: 'integrações api webhooks conectar' },
+      { title: 'Contatos', url: 'contatos.html', section: 'CRM', keywords: 'contatos leads clientes pessoas' },
+      { title: 'Etiquetas', url: 'etiquetas.html', section: 'CRM', keywords: 'etiquetas tags classificação' },
+      { title: 'Empresas', url: 'empresas.html', section: 'CRM', keywords: 'empresas organizações contas' },
+      { title: 'Produtos', url: 'produtos.html', section: 'CRM', keywords: 'produtos catálogo itens' },
+      { title: 'Negócios', url: 'negocios.html', section: 'CRM', keywords: 'negócios oportunidades vendas deals' },
+      { title: 'Tarefas', url: 'tarefas.html', section: 'CRM', keywords: 'tarefas atividades follow-up' },
+      { title: 'Painéis Personalizados', url: 'paineis-personalizados.html', section: 'CRM', keywords: 'painéis dashboard relatórios personalizado' },
+      { title: 'WhatsApp API', url: 'whatsapp-api.html', section: 'WhatsApp API', keywords: 'whatsapp api mensagens número' },
+      { title: 'Coexistência (Coex)', url: 'coexistencia-coex.html', section: 'WhatsApp API', keywords: 'coexistência coex whatsapp múltiplos' },
+      { title: 'Boas Práticas do WhatsApp', url: 'boas-praticas-do-whatsapp.html', section: 'WhatsApp API', keywords: 'boas práticas whatsapp regras' },
+      { title: 'Recursos da Meta', url: 'recursos-da-meta.html', section: 'WhatsApp API', keywords: 'meta facebook recursos api' },
+      { title: 'Arquivos', url: 'arquivos.html', section: 'Marketing', keywords: 'arquivos mídia documentos imagens' },
+      { title: 'E-mails', url: 'e-mails.html', section: 'Marketing', keywords: 'email e-mail envio campanha' },
+      { title: 'Formulários', url: 'formularios.html', section: 'Marketing', keywords: 'formulários captura leads forms' },
+      { title: 'Landing Page', url: 'landing-page.html', section: 'Marketing', keywords: 'landing page página destino' },
+      { title: 'Segmentos', url: 'segmentos.html', section: 'Marketing', keywords: 'segmentos listas grupos filtros' },
+      { title: 'Pontuação', url: 'pontuacao.html', section: 'Marketing', keywords: 'pontuação lead score qualificação' },
+      { title: 'Domínios', url: 'dominios.html', section: 'Marketing', keywords: 'domínios dns email configuração' },
+      { title: 'Anúncios', url: 'anuncios.html', section: 'Marketing', keywords: 'anúncios ads publicidade campanhas' },
+      { title: 'Meta Pixel', url: 'meta-pixel.html', section: 'Marketing', keywords: 'meta pixel facebook rastreamento' },
+      { title: 'Fluxos de Automação', url: 'fluxos-de-automacao.html', section: 'Fluxos de Automação', keywords: 'fluxos automação workflow' },
+      { title: 'Fluxos - Ações', url: 'fluxos-acoes.html', section: 'Fluxos de Automação', keywords: 'fluxos ações automação tarefas' },
+      { title: 'Fluxos - Condicionais', url: 'fluxos-condicionais.html', section: 'Fluxos de Automação', keywords: 'fluxos condicionais if então regras' },
+      { title: 'Fluxos - Decisões', url: 'fluxos-decisoes.html', section: 'Fluxos de Automação', keywords: 'fluxos decisões ramificações' },
+      { title: 'Alvo de Fluxo', url: 'alvo-de-fluxo.html', section: 'Fluxos de Automação', keywords: 'alvo fluxo gatilho trigger' },
+    ];
+
+    function doSearch(query) {
+      const q = query.toLowerCase().trim();
+      const resultsEl = document.getElementById('search-results');
+      const countEl = document.getElementById('results-count');
+
+      if (!q) {
+        countEl.textContent = '';
+        resultsEl.innerHTML = '';
+        return;
+      }
+
+      const matches = ARTICLES.filter(a =>
+        a.title.toLowerCase().includes(q) ||
+        a.section.toLowerCase().includes(q) ||
+        a.keywords.toLowerCase().includes(q)
+      );
+
+      countEl.textContent = matches.length > 0
+        ? `${matches.length} resultado${matches.length !== 1 ? 's' : ''} encontrado${matches.length !== 1 ? 's' : ''} para "${query}"`
+        : '';
+
+      if (matches.length === 0) {
+        resultsEl.innerHTML = `
+          <div class="no-results">
+            <div class="icon">🔍</div>
+            <p>Nenhum resultado encontrado para "<strong>${query}</strong>"</p>
+            <p style="margin-top:.5rem;font-size:.9rem;">Tente outras palavras-chave</p>
+          </div>`;
+      } else {
+        resultsEl.innerHTML = matches.map(a => `
+          <a href="${a.url}" class="search-result-item">
+            <div class="search-result-section">${a.section}</div>
+            <div class="search-result-title">${a.title}</div>
+          </a>`).join('');
+      }
+    }
+
+    // Read query from URL on load
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get('q') || '';
+    const inputEl = document.getElementById('main-search-input');
+    inputEl.value = initialQuery;
+    if (initialQuery) doSearch(initialQuery);
+
+    // Search on button click
+    document.getElementById('main-search-btn').addEventListener('click', () => {
+      const q = inputEl.value.trim();
+      if (q) {
+        history.replaceState(null, '', `search.html?q=${encodeURIComponent(q)}`);
+        doSearch(q);
+      }
+    });
+
+    // Search on Enter
+    inputEl.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = inputEl.value.trim();
+        if (q) {
+          history.replaceState(null, '', `search.html?q=${encodeURIComponent(q)}`);
+          doSearch(q);
+        }
+      }
+    });
+
+    // Live search as typing
+    inputEl.addEventListener('input', () => doSearch(inputEl.value));
+  </script>
+</body>
+</html>
